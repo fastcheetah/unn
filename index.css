@@ -80,6 +80,7 @@ background-color: whitesmoke;
     color: blue;
    text-decoration: bold, underline;
    font-family: sans-serif,Arial, Helvetica, ;
+    cursor:pointer;
 }
 label{
     display:inline;
