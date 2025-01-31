@@ -63,6 +63,10 @@ margin-left:auto;
 margin-right: auto;
 background-color: whitesmoke;
 }
+.signup:hover{
+    color:green;
+}
+
 .login{
     margin-top:22px;
     padding:5.5px 50px;
