@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Valley School - Registration Form</title>
+    <title>University of Nigeria Nsukka - Registration Form</title>
     <link rel="stylesheet" href="index.css">
   </head>
 <body>
     <div class="container">
         <header>
-            <h1>Green Valley School</h1>
+            <h1>University of Nigeria Nsukka</h1>
             <p>Student Registration Form</p>
         </header>
         
@@ -89,12 +89,12 @@
                     <label for="state" class="required">State</label>
                     <select id="state" name="state" required>
                         <option value="" selected disabled>Select State</option>
-                        <option value="AL">Alabama</option>
-                        <option value="AK">Alaska</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="AR">Arkansas</option>
-                        <option value="CA">California</option>
-                        <!-- More states would be listed here -->
+                        <option value="EN">Enugu</option>
+                        <option value="AN">Anambara</option>
+                        <option value="AB">Abuja</option>
+                        <option value="LG">Lagos</option>
+                        <option value="EB">Ebonyi</option>
+                        
                     </select>
                 </div>
                 
@@ -176,7 +176,7 @@
             const genderSelect = document.getElementById('gender');
             const genderError = document.getElementById('gender-error');
             
-            // Validate gender selection
+            
             genderSelect.addEventListener('change', function() {
                 if (this.value === '') {
                     this.classList.add('error');
@@ -187,18 +187,18 @@
                 }
             });
             
-            // Form submission validation
+          
             form.addEventListener('submit', function(event) {
                 let isValid = true;
                 
-                // Validate gender
+            
                 if (genderSelect.value === '') {
                     genderSelect.classList.add('error');
                     genderError.style.display = 'block';
                     isValid = false;
                 }
                 
-                // Validate year of inception
+             
                 const yearInception = document.getElementById('year_inception');
                 const currentYear = new Date().getFullYear();
                 
@@ -210,13 +210,11 @@
                     yearInception.classList.remove('error');
                 }
                 
-                // Prevent form submission if validation fails
                 if (!isValid) {
                     event.preventDefault();
                 }
             });
             
-            // Reset validation styling on form reset
             form.addEventListener('reset', function() {
                 const inputs = form.querySelectorAll('input, select');
                 inputs.forEach(input => {
