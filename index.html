@@ -170,3 +170,61 @@
             <p>Green Valley School &copy; 2025 | All Rights Reserved</p>
         </footer>
     </div>
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registrationForm');
+            const genderSelect = document.getElementById('gender');
+            const genderError = document.getElementById('gender-error');
+            
+            // Validate gender selection
+            genderSelect.addEventListener('change', function() {
+                if (this.value === '') {
+                    this.classList.add('error');
+                    genderError.style.display = 'block';
+                } else {
+                    this.classList.remove('error');
+                    genderError.style.display = 'none';
+                }
+            });
+            
+            // Form submission validation
+            form.addEventListener('submit', function(event) {
+                let isValid = true;
+                
+                // Validate gender
+                if (genderSelect.value === '') {
+                    genderSelect.classList.add('error');
+                    genderError.style.display = 'block';
+                    isValid = false;
+                }
+                
+                // Validate year of inception
+                const yearInception = document.getElementById('year_inception');
+                const currentYear = new Date().getFullYear();
+                
+                if (yearInception.value < 1990 || yearInception.value > currentYear) {
+                    yearInception.classList.add('error');
+                    isValid = false;
+                    alert('Please enter a valid year between 1990 and ' + currentYear);
+                } else {
+                    yearInception.classList.remove('error');
+                }
+                
+                // Prevent form submission if validation fails
+                if (!isValid) {
+                    event.preventDefault();
+                }
+            });
+            
+            // Reset validation styling on form reset
+            form.addEventListener('reset', function() {
+                const inputs = form.querySelectorAll('input, select');
+                inputs.forEach(input => {
+                    input.classList.remove('error');
+                });
+                genderError.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
