@@ -1,1 +1,171 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Valley School - Registration Form</title>
+  </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Green Valley School</h1>
+            <p>Student Registration Form</p>
+        </header>
+        
+        <form id="registrationForm" action="#" method="post">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first_name" class="required">First Name</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="last_name" class="required">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="gender" class="required">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" selected disabled>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <div id="gender-error" class="error-message">Please select your gender</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob" class="required">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="required">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <div class="hint">Please use an email you check regularly</div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone" class="required">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="year_inception" class="required">Year of Inception</label>
+                    <input type="number" id="year_inception" name="year_inception" min="1990" max="2025" required>
+                    <div class="hint">Year you started/will start school</div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="department" class="required">Department</label>
+                <input type="text" id="department" name="department" required>
+                <div class="hint">e.g. Science, Arts, Social Sciences</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="course" class="required">Course of Study</label>
+                <input type="text" id="course" name="course" required>
+                <div class="hint">e.g. Computer Science, Biology, Economics</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="address" class="required">Home Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="city" class="required">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="state" class="required">State</label>
+                    <select id="state" name="state" required>
+                        <option value="" selected disabled>Select State</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <!-- More states would be listed here -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="zip" class="required">ZIP Code</label>
+                    <input type="text" id="zip" name="zip" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="grade" class="required">Grade Level</label>
+                <select id="grade" name="grade" required>
+                    <option value="" selected disabled>Select Grade</option>
+                    <option value="6">6th Grade</option>
+                    <option value="7">7th Grade</option>
+                    <option value="8">8th Grade</option>
+                    <option value="9">9th Grade</option>
+                    <option value="10">10th Grade</option>
+                    <option value="11">11th Grade</option>
+                    <option value="12">12th Grade</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Interested Programs</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="academic" name="programs[]" value="academic">
+                        <label for="academic">Academic Excellence</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="sports" name="programs[]" value="sports">
+                        <label for="sports">Sports Programs</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="arts" name="programs[]" value="arts">
+                        <label for="arts">Arts & Music</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="stem" name="programs[]" value="stem">
+                        <label for="stem">STEM Program</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="parent_name" class="required">Parent/Guardian Name</label>
+                <input type="text" id="parent_name" name="parent_name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="parent_phone" class="required">Parent/Guardian Phone</label>
+                <input type="tel" id="parent_phone" name="parent_phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="emergency_contact" class="required">Emergency Contact Name</label>
+                <input type="text" id="emergency_contact" name="emergency_contact" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="emergency_phone" class="required">Emergency Contact Phone</label>
+                <input type="tel" id="emergency_phone" name="emergency_phone" required>
+            </div>
+            
+            <div class="form-actions">
+                <button type="reset" class="btn btn-outline">Clear Form</button>
+                <button type="submit" class="btn">Submit Registration</button>
+            </div>
+        </form>
+        
+        <footer>
+            <p>Green Valley School &copy; 2025 | All Rights Reserved</p>
+        </footer>
+    </div>
